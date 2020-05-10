@@ -16,7 +16,14 @@ def index():
     #Home Page
     print("VISITED THE HOME PAGE...")
     #return render_template("order_page.html", results = restaurant_list)
-    return render_template("index.html", results = restaurant_list)
+    return render_template("first_page.html", results = restaurant_list)
+
+@home_routes.route("/next")
+def index_two():
+    #Home Page
+    print("VISITED THE HOME PAGE...")
+    #return render_template("order_page.html", results = restaurant_list)
+    return render_template("second_page.html", results = CFA_items)
 
 @home_routes.route("/order/page", methods=["GET", "POST"])
 def order_page():
