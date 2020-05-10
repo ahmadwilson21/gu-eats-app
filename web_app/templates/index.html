@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Shop Homepage - Start Bootstrap Template</title>
+  <title>GU Eats Homepage</title>
 
   <!-- Bootstrap core CSS -->
 
@@ -47,7 +47,7 @@
 */
 .actionButtons {
     position:fixed;
-    bottom:1px;
+    bottom:5px;
     left:50%;
     right:0;
     background:gray;
@@ -55,20 +55,28 @@
     width:150px;
     
 }
+/*
+body {
+    background-color: #fad083;
+}*/
+.carousel-inner{
+  width:100%;
+  max-height: 500px !important;
+}
 </style>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color:rgb(3, 36, 87);">
     <div class="container">
-      <a class="navbar-brand" href="/">GU Food Ordering System</a>
+      <a class="navbar-brand" href="/" style="color:white; font-size: xx-large;">Georgetown Eats</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/">Home
+            <a class="nav-link" href="/" style=" font-size: large; color: white;">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -95,9 +103,11 @@
     </div>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
+    <div id="footer">
+        <hr>
+        &copy; Copyright Ahmad Wilson|
+        <a href="https://github.com/ahmadwilson21/gu-eats-app">source</a>
+      </div>
     <!-- /.container -->
   </footer>
 
