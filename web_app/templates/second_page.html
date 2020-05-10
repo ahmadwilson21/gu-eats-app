@@ -5,7 +5,7 @@
 <form action="/order/subtotal" method="POST"> 
     {% set position = 1 %} 
 <!-- <div class="row" > -->
-     {% set numOfCols=2 %}
+     {% set numOfCols=3 %}
      
      {% set bootstrapColWidth = 12/numOfCols %}
      
@@ -16,10 +16,10 @@
         <!--https://stackoverflow.com/questions/40561301/loop-row-in-bootstrap-every-3-columns-->
     {% set rowCount = results.index(result) %}
     {% if rowCount % numOfCols==0 %}
-        <h1>{{rowCount}} {{numOfCols}}</h1>
-    <div class="row">
+        
+    <div class="row ">
     {% endif %}
-        <div class="col-xs-6 col-lg-6 col-md-6 mb-6">
+        <div class="col-xs-4 col-lg-4 col-md-4 mb-4" style="left:7%; max-width: 24rem; right:7%; bottom:10%;">
         
             
         
@@ -53,7 +53,7 @@
    <!--{% set rowCount = results.index(result) %}-->
    {% set rowCount = rowCount + 1 %}
     {% if rowCount % numOfCols==0 %}
-        <h1>{{rowCount}} {{numOfCols}}</h1>
+        
     </div>
     {% endif %}
  <!-- </div> -->
