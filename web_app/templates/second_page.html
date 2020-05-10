@@ -2,22 +2,23 @@
 
 {% block content %}
   
-<form action="/order/page" method="POST"> 
-    
- <div class="row">
+<form action="/order/subtotal" method="POST"> 
+    {% set position = 1 %} 
+ <div class="row" >
     {% for result in results %}
-
-    <div class="col-lg-4 col-md-6 mb-4">
-       
-
-         <label>
-        
     
+    <div class="col-lg-4 col-md-6 mb-4">
+        
+        
+            
+        
       <div class="card h-100">
-        <a ><img class="card-img-top" src="{{result['Image Link']}}" alt=""></a>
+        <label>
+        <a ><img class="card-img-top" src="{{result['Image Link']}}"  alt=""></a>
+        <!-- -->
         <div class="card-body">
           <h4 class="card-title">
-            <a ><input type='checkbox'  id = "{{result['Item ID']}}"name="{{result['Name']}}" value="{{result['Price']}}">{{result['Name']}}</a>
+            <a > <input type='checkbox'  id = "{{result['Item ID']}}"name="{{result['Name']}}" value="{{result['Price']}}">{{result['Name']}}</a>
             
         </h4>
           <h5>{{result["Price"]}}</h5>
@@ -26,16 +27,18 @@
         <div class="card-footer">
           <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
         </div>
+    </label>
       </div>
-    </label> 
+   
+    <!-- </label>  -->
     </div>
-</label>
+
     {% endfor %}
 
     <br>
-    <div style="text-align: center; ">
-     <button> Submit</button> 
-        </div>
+    
+     <button class = actionButtons> Submit</button> 
+    
   </form>
 <!--
     <div class="col-lg-4 col-md-6 mb-4">

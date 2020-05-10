@@ -17,23 +17,62 @@
   <link href="{{ url_for('static', filename='css/shop-homepage.css') }}" rel="stylesheet">
 
 </head>
-
+<style>
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit:contain;
+}
+.button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*
+.actionButtons {
+    position:fixed;
+    bottom:25px;
+    left:0;
+    right:0;
+    background:blue;
+    height:30px;
+    text-align: ;
+}
+*/
+.actionButtons {
+    position:fixed;
+    bottom:1px;
+    left:50%;
+    right:0;
+    background:gray;
+    height:50px;
+    width:150px;
+    
+}
+</style>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="/">GU Food Ordering System</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home
+            <a class="nav-link" href="/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
+          <!--
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
@@ -43,6 +82,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
+          -->
         </ul>
       </div>
     </div>

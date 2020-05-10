@@ -18,10 +18,36 @@ def index():
     #return render_template("order_page.html", results = restaurant_list)
     return render_template("first_page.html", results = restaurant_list)
 
-@home_routes.route("/next")
+@home_routes.route("/next", methods=["GET", "POST"])
 def index_two():
     #Home Page
     print("VISITED THE HOME PAGE...")
+
+    if request.method == "POST":
+        print("FORM DATA:", dict(request.form)) #> {'zip_code': '20057'}
+        selection = dict(request.form)
+    elif request.method == "GET":
+        print("URL PARAMS:", dict(request.args))
+        selection = dict(request.args)
+
+    
+    # returns the appropriate menu item based on which restaurant you selected
+    if(selection):
+        if(selection["name"] == "CFA"):
+            print("selected name is CFA")
+            return render_template("second_page.html", results = CFA_items, restaurant = "CFA") #takes me to order_items.html
+        elif(selection["name"] == "Wisey's"):
+            print("selected name is Wiseys")
+            return render_template("second_page.html", results =Wiseys_items, restaurant = "Wisey's") #takes me to order_items.html
+        elif(selection["name"] == "Epicurean"):
+            print("selected name is Epicurean")
+            return render_template("second_page.html", results =EPI_items, restaurant = "Epicurean") #takes me to order_items.html
+        elif(selection["name"] == "Starbucks"):
+            print("selected name is Starbucks")
+            return render_template("second_page.html", results =Starbucks_items, restaurant = "Starbucks") #takes me to order_items.html
+    else:
+        return render_template("second_page.html",results = restaurant_list)
+
     #return render_template("order_page.html", results = restaurant_list)
     return render_template("second_page.html", results = CFA_items)
 
