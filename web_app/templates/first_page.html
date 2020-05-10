@@ -12,11 +12,12 @@
 
       <div class="col-lg-3">
 
-        <h1 class="my-4">Shop Name</h1>
+        <h1 class="my-4" style=" text-align:center; color: white; background: rgb(161, 161, 161); border: 2px solid;
+        border-radius: 25px;">Restaurants</h1>
         <div class="list-group">
           {% for result in results %}
           <form action="/next" method="POST" >
-          <button class = "list-group-item" style= "width:150px;" name="name" value="{{result['name']}}">
+          <button class = "list-group-item" style= "font-size:xx-large; width:250px; color:white; background: rgb(161, 161, 161);" name="name" value="{{result['name']}}" >
             {{result['name']}}
             </button></form>
               <!--<a href="next" class="list-group-item">{{result['name']}}</a> -->
@@ -33,17 +34,24 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
           <div class="carousel-inner" role="listbox">
+              
             <div class="carousel-item active">
-              <img class="d-block img-fluid" width="700" height="350" src="data:image/png;base64,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" alt="First slide">
+              
+                <img class="d-block img-fluid" width="900px;" height="350px;" 
+                src="https://cdn.usarestaurants.info/assets/uploads/bff676e7c7cebd005beede1226ffe174_-united-states-district-of-columbia-washington-564337-epicurean-and-companyhtm.jpg"  alt="First slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+              <img class="d-block img-fluid" width="900px'" height="350px;" src="https://www.georgetown.edu/wp-content/uploads/archive/chikfila.jpg" alt="Second slide">
             </div>
             <div class="carousel-item">
-              <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+              <img class="d-block img-fluid" width="900px;" height="350px;"src="https://thehoya.com/wp-content/uploads/2019/05/reala7_wiseys_DorisZhangTheHoya.png" alt="Third slide">
             </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" width="900px;" height="350px;" src="https://www.antunovich.com//upload/projects/233/208424349_sellinger3_medium.jpg" alt="Fourth slide">
+              </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,7 +73,7 @@
   </div>
   <!-- /.container -->
    <!--GU Orders Home Page-->
-    <h1> Welcome to Georgetown's Food Ordering System </h1>
+  
     
 
 

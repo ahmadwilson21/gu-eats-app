@@ -29,6 +29,16 @@ img.class-name
     overflow: hidden;
     margin-top: -6px;
 }
+.actionButtons {
+    position:fixed;
+    bottom:5px;
+    left:50%;
+    right:0;
+    background:gray;
+    height:50px;
+    width:150px;
+    
+}
  h1, h2{
         text-align: center;
       }
@@ -118,8 +128,8 @@ img.class-name
       ('/', 'order_page', 'Home')
     ] -%}
     {% set active_page = active_page|default('index') -%}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #414141";>
-      <a class="navbar-brand" href="/">GU Food Ordering System </a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(3, 36, 87);">
+      <a class="navbar-brand" href="/" style="font-size: xx-large; color: white;">Georgetown Eats </a>
        <!-- <div class="logo-image">
           <img src="https://i.pinimg.com/originals/47/4c/c0/474cc0ce864dfd65257f99ce0cfaf7ae.png" class="img-fluid">
     </div>-->
@@ -136,7 +146,7 @@ img.class-name
               {% set is_active = "" -%}
             {% endif %}
             <li class="nav-item">
-              <a class="nav-link {{ is_active }}" href="{{href}}">{{link_text}}</a>
+              <a style ="color:white; font-size: large;" class="nav-link {{ is_active }}" href="{{href}}">{{link_text}}</a>
             </li>
           {% endfor %}
         </div>
@@ -154,8 +164,8 @@ img.class-name
       <!-- FOOTER -->
       <div id="footer">
         <hr>
-        &copy; Copyright Henry Reinstin, Ahmad Wilson, Jennifer Lu |
-        <a href="https://github.com/ahmadwilson21/final-project-py/">source</a>
+        &copy; Copyright Ahmad Wilson|
+        <a href="https://github.com/ahmadwilson21/gu-eats-app">source</a>
       </div>
     </div>
 
