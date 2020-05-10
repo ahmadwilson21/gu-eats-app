@@ -1,7 +1,7 @@
 
 # web_app/routes/home_routes.py
 
-from flask import Blueprint, render_template, flash, redirect, request
+from flask import Blueprint, render_template, flash, redirect, request, url_for
 from flask import Flask
 from app.order_service import restaurant_list, CFA_items, EPI_items,Wiseys_items,Starbucks_items
 from app.order_service import subtotal_calc, choices_converter, to_usd, orders_list, UserInfoToSheet, restaurant_id
@@ -15,7 +15,8 @@ restaurant = "None"
 def index():
     #Home Page
     print("VISITED THE HOME PAGE...")
-    return render_template("order_page.html", results = restaurant_list)
+    #return render_template("order_page.html", results = restaurant_list)
+    return render_template("index.html", results = restaurant_list)
 
 @home_routes.route("/order/page", methods=["GET", "POST"])
 def order_page():

@@ -3,10 +3,10 @@
 import os
 from dotenv import load_dotenv
 from flask import Flask
-
+from web_app import static
 from web_app.routes.home_routes import home_routes
 
-
+static_folder = 'static'
 load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY", default="super secret")
