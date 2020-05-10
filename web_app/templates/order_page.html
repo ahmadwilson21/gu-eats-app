@@ -1,0 +1,36 @@
+{% extends "bootstrap_layout.html" %}
+
+{% block content %}
+  
+ 
+  
+   <!--GU Orders Home Page-->
+    <h1> Welcome to Georgetown's Food Ordering System </h1>
+    
+    
+    <ul>
+        <form action="/order/page" method="POST">    <!--This takes me to orders/select home route and thus order_items.html-->
+          
+            <h2>Restauraunt Selection:</h2>
+              <form>
+               
+                {% for result in results %}
+               
+                  <label class ="label1">
+                    
+                  <img src="static/{{result['name']}}.jpg" width ="225" height ="180" alt = "{{result['name']}}" />  
+                  <input type="radio" id=restaurant name= "name"  value="{{result['name']}}"  multiple>
+                  
+                </label>
+          
+                
+                  {% endfor %}
+                  <br>
+                  <div style="text-align: center; ">
+                   <button> Submit</button> 
+                      </div>
+                </form>
+ 
+    </ul>
+
+{% endblock %}
